@@ -7,7 +7,7 @@ const getRandomColorChannel = function(options=256) {
 }
 
 // Here's a test number, check the console to see the result
-console.log( getRandomColorChannel() )
+// console.log( getRandomColorChannel() )
 
 
 
@@ -20,3 +20,26 @@ console.log( getRandomColorChannel() )
 // 3) Use the three individual RGB numbers to update the HTML element "rgb(###, ####, ###)" (replacing ###s with the values)
 
 // 4) Wrap the entire procedure in a function named `setNewColour()`, call it multiple times from the `console` to test
+
+const r = getRandomColorChannel() // red
+
+const g = getRandomColorChannel() // green
+
+const b = getRandomColorChannel() // blue
+
+
+
+const theColor = `rgb(${r}, ${g}, ${b})`
+
+
+
+// Set the colour rgb() to the body's style.backgroundColor
+
+document.querySelector(`body`).style.backgroundColor = theColor
+
+
+
+// Set the text for the <h1> to have the textContent: rgb()
+
+document.querySelector(`#rgbColor`).textContent = theColor
+
